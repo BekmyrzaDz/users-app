@@ -1,0 +1,76 @@
+.header {
+	background: #512689;
+}
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 16px;
+}
+
+.headerTop {
+	display: flex;
+	justify-content: end;
+}
+
+.button {
+	font-family: 'Roboto', serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 21.79px;
+	color: #f8f8f8;
+	border-radius: 8px;
+	padding: 8px 16px 8px 16px;
+	width: 81px;
+	border: 1px solid #f8f8f8;
+	background: #512689;
+	margin-top: 32px;
+	cursor: pointer;
+}
+
+.iconBtn {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.headerContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 64px;
+}
+
+.headerContentWrapper {
+	max-width: 846px;
+	text-align: center;
+}
+
+.title {
+	font-family: 'Roboto', serif;
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 75px;
+	color: #ffffff;
+}
+
+.subTitle {
+	font-family: 'Roboto', serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 23.44px;
+	color: #f8f8f8;
+}
+
+@media (max-width: 375px) {
+	.title {
+		font-size: 36px;
+		line-height: 42.19px;
+	}
+
+	.subTitle {
+		font-size: 16px;
+		line-height: 18.75px;
+	}
+}

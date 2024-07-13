@@ -3,7 +3,9 @@ import { Form, Formik } from 'formik'
 import { useState } from 'react'
 import { Hide, Show } from '../../assets'
 import { Button, Input } from '../../components'
+import { useAppDispatch } from '../../hooks/redux'
 import PassInput from './components/Input/index'
+import { createUser } from './redux/asyncActions'
 import styles from './Register.module.scss'
 import { RegisterSchema } from './Schema/Validation'
 import { registerState } from './State'
@@ -16,8 +18,14 @@ const Register = () => {
 	const toggleShowConfirmPassword = () =>
 		setShowConfirmPassword(!showConfirmPassword)
 
+	const dispatch = useAppDispatch()
+
 	function onSubmit(values: IRegisterState) {
-		console.log(values)
+		const { username, email, password } = values
+		const newValues = { username, email, password }
+		console.log(newValues)
+
+		dispatch(createUser(newValues))
 	}
 
 	return (

@@ -1,5 +1,12 @@
-import Hide from './hide.png'
-import LockSvg from './lock.svg'
-import Show from './show.png'
+// Icons
+import ActiveLike from './icons/activeLike.svg'
+import Exit from './icons/exit.svg'
+import Hide from './icons/hide.png'
+import DefaultLike from './icons/like.svg'
+import LockSvg from './icons/lock.svg'
+import Show from './icons/show.png'
 
-export { Hide, LockSvg, Show }
+// Images
+import Ellipse from './images/Ellipse.svg'
+
+export { ActiveLike, DefaultLike, Ellipse, Exit, Hide, LockSvg, Show }

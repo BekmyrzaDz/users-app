@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import homePageReducer from '../modules/HomePage/redux/homePageSlice'
 import registerReducer from '../modules/Register/redux/registerSlice'
 
 const rootReducer = combineReducers({
 	register: registerReducer,
+	home: homePageReducer,
 })
 
 export const setupStore = () => {

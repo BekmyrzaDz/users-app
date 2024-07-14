@@ -2,11 +2,12 @@ import { ActiveLike } from '../../../assets'
 import { ILikeProps } from '../types'
 import styles from './LikeActive.module.scss'
 
-const LikeActive = ({ setActive }: ILikeProps) => {
-	const active = () => setActive(prev => !prev)
-
+const LikeActive = ({ id, removeLike }: ILikeProps) => {
 	return (
-		<div className={styles.wrapper} onClick={active}>
+		<div
+			className={styles.wrapper}
+			onClick={() => removeLike && removeLike(id as number)}
+		>
 			<img className={styles.like} src={ActiveLike} alt='active like' />
 		</div>
 	)

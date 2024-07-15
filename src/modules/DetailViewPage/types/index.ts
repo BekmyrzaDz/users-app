@@ -28,3 +28,8 @@ export interface IHeader {
 	lastName?: string
 	avatar?: string
 }
+
+export interface IDetailViewContent {
+	email: string
+	phone: string
+}

@@ -1,0 +1,62 @@
+@mixin Typography {
+	font-family: 'Roboto', serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 21.79px;
+	color: #151317;
+}
+
+.detailViewContent {
+	margin-top: 50px;
+}
+
+.container {
+	max-width: 847px;
+	margin: 0 auto;
+}
+
+.detailViewContentInner {
+	display: grid;
+	grid-template-columns: 630px 1fr;
+	gap: 129px;
+}
+
+.contacts {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.text {
+	@include Typography();
+}
+
+.phone {
+	@include Typography();
+}
+
+.email {
+	@include Typography();
+}
+
+.phoneWrapper {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.phoneImg {
+	width: 24px;
+	height: 24px;
+}
+
+.emailWrapper {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.emailImg {
+	width: 24px;
+	height: 24px;
+}

@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
-import { Header } from '../../modules'
+import { DetailViewContent, Header } from '../../modules'
 import { extractFirstNumberFromString } from '../../modules/DetailViewPage/helpers'
 import { fetchUser } from '../../modules/DetailViewPage/redux/asyncActions'
 import styles from './DetailViewPage.module.scss'
@@ -19,6 +19,7 @@ const DetailViewPage = () => {
 	const firstName = userData?.data?.first_name
 	const lastName = userData?.data?.last_name
 	const avatar = userData?.data?.avatar
+	const email = userData?.data?.email
 
 	return (
 		<div className={styles.detailView}>
@@ -27,6 +28,7 @@ const DetailViewPage = () => {
 				lastName={lastName as string}
 				avatar={avatar as string}
 			/>
+			<DetailViewContent email={email as string} phone={'+7 (954) 333-44-55'} />
 		</div>
 	)
 }

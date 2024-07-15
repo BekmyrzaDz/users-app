@@ -1,0 +1,82 @@
+.tablet {
+	display: grid;
+	grid-template-columns: 81px auto 81px;
+	gap: 30px;
+	padding: 32px;
+}
+
+.tabletDetail {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+}
+
+.avatar {
+	width: 187px;
+	height: 187px;
+	border-radius: 100%;
+}
+
+.name {
+	font-family: 'Roboto', serif;
+	font: 400px;
+	font-size: 36px;
+	line-height: 42.19px;
+	color: #ffffff;
+}
+
+.partner {
+	font-family: 'Roboto', serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 23.44px;
+	color: #ffffff;
+}
+
+.exit {
+	display: flex;
+	justify-content: end;
+}
+
+.button {
+	font-family: 'Roboto', serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 21.79px;
+	color: #f8f8f8;
+	border-radius: 8px;
+	padding: 8px 16px 8px 16px;
+	width: 81px;
+	height: 38px;
+	border: 1px solid #f8f8f8;
+	background: #512689;
+	cursor: pointer;
+}
+
+.iconBtn {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
+@media (max-width: 715px) {
+	.tablet {
+		gap: 20px;
+		padding: 22px;
+	}
+
+	.tabletDetail {
+		gap: 20px;
+	}
+}
+
+@media (max-width: 660px) {
+	.tablet {
+		gap: 10px;
+		padding: 12px;
+	}
+
+	.tabletDetail {
+		gap: 10px;
+	}
+}

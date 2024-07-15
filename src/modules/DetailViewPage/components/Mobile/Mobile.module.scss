@@ -1,0 +1,67 @@
+.mobile {
+	padding: 12px 16px 64px;
+}
+
+.mobileTop {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+.mobileDetail {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	gap: 16px;
+}
+
+.avatar {
+	width: 187px;
+	height: 187px;
+	border-radius: 100%;
+}
+
+.name {
+	font-family: 'Roboto', serif;
+	font: 400px;
+	font-size: 36px;
+	line-height: 42.19px;
+	color: #ffffff;
+}
+
+.partner {
+	font-family: 'Roboto', serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 23.44px;
+	color: #ffffff;
+}
+
+.exit {
+	display: flex;
+	justify-content: end;
+}
+
+.button {
+	font-family: 'Roboto', serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 21.79px;
+	color: #f8f8f8;
+	border-radius: 8px;
+	padding: 8px 16px 8px 16px;
+	width: 81px;
+	height: 38px;
+	border: 1px solid #f8f8f8;
+	background: #512689;
+	cursor: pointer;
+}
+
+.iconBtn {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}

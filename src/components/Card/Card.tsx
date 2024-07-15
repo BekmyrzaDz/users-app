@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Like from '../Likes/Like/Like'
 import ActiveLike from '../Likes/LikeActive/LikeActive'
 import styles from './Card.module.scss'
@@ -6,6 +7,7 @@ import { ICard } from './types'
 
 const Card = ({ id, firstName, lastName, avatar, likes, setLikes }: ICard) => {
 	const [isLike, setIsLike] = useState<boolean>(likes.includes(id as number))
+	const navigate = useNavigate()
 	const likeKey = 'like'
 
 	const addLike = (id: number): void => {
@@ -21,7 +23,7 @@ const Card = ({ id, firstName, lastName, avatar, likes, setLikes }: ICard) => {
 	}
 
 	return (
-		<div className={styles.card}>
+		<div className={styles.card} onClick={() => navigate(`/:${id}`)}>
 			<div className={styles.cardInner}>
 				<div className={styles.cardTop}>
 					<img className={styles.avatar} src={avatar} alt='Avatar' />

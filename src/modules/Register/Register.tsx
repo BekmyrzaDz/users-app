@@ -1,11 +1,10 @@
 import clsx from 'clsx'
 import { Form, Formik } from 'formik'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Hide, Show } from '../../assets'
 import { Button, Input } from '../../components'
-import { useAppDispatch } from '../../hooks/redux'
 import PassInput from './components/Input/index'
-import { createUser } from './redux/asyncActions'
 import styles from './Register.module.scss'
 import { RegisterSchema } from './Schema/Validation'
 import { registerState } from './State'
@@ -17,15 +16,20 @@ const Register = () => {
 	const toggleShowPassword = () => setShowPassword(!showPassword)
 	const toggleShowConfirmPassword = () =>
 		setShowConfirmPassword(!showConfirmPassword)
-
-	const dispatch = useAppDispatch()
+	const navigate = useNavigate()
 
 	function onSubmit(values: IRegisterState) {
 		const { username, email, password } = values
 		const newValues = { username, email, password }
 		console.log(newValues)
 
-		dispatch(createUser(newValues))
+		localStorage.setItem('token', 'token')
+
+		const token = localStorage.getItem('token')
+
+		if (token) {
+			navigate('/home')
+		}
 	}
 
 	return (

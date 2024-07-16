@@ -5,6 +5,10 @@ import styles from './Mobile.module.scss'
 
 const Mobile = ({ firstName, lastName, avatar }: IHeader) => {
 	const navigate = useNavigate()
+	const exit = () => {
+		localStorage.removeItem('token')
+		navigate('/register')
+	}
 
 	return (
 		<div className={styles.mobile}>
@@ -16,7 +20,12 @@ const Mobile = ({ firstName, lastName, avatar }: IHeader) => {
 					onClick={() => navigate(-1)}
 				/>
 				<div className={styles.exit}>
-					<img className={styles.iconBtn} src={Exit} alt='Exit' />
+					<img
+						className={styles.iconBtn}
+						src={Exit}
+						alt='Exit'
+						onClick={exit}
+					/>
 				</div>
 			</div>
 			<div className={styles.mobileDetail}>

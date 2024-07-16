@@ -5,6 +5,10 @@ import styles from './DesktopOrLaptop.module.scss'
 
 const DesktopOrLaptop = ({ firstName, lastName, avatar }: IHeader) => {
 	const navigate = useNavigate()
+	const exit = () => {
+		localStorage.removeItem('token')
+		navigate('/register')
+	}
 
 	return (
 		<div className={styles.desktopOrLaptop}>
@@ -21,7 +25,9 @@ const DesktopOrLaptop = ({ firstName, lastName, avatar }: IHeader) => {
 				</div>
 			</div>
 			<div className={styles.exit}>
-				<Button className={styles.button}>Выход</Button>
+				<Button className={styles.button} onClick={exit}>
+					Выход
+				</Button>
 			</div>
 		</div>
 	)

@@ -3,13 +3,14 @@ import { DetailViewPage, HomePage, LoginPage, RegisterPage } from '../pages'
 
 export const router = createBrowserRouter([
 	{
-		path: '/',
+		path: '/home',
 		element: <HomePage />,
 	},
 	{
 		path: '/:id',
 		element: <DetailViewPage />,
 	},
-	{ path: '/register', element: <RegisterPage />, index: true },
+	{ path: '/', element: <RegisterPage /> },
+	{ path: '/register', element: <RegisterPage /> },
 	{ path: '/login', element: <LoginPage /> },
 ])

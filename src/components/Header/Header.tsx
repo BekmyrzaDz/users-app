@@ -1,19 +1,32 @@
 import { useMediaQuery } from 'react-responsive'
+import { useNavigate } from 'react-router-dom'
 import { Button } from '..'
 import { Exit } from '../../assets'
 import styles from './Header.module.scss'
 
 const Header = () => {
+	const navigate = useNavigate()
 	const isMobile = useMediaQuery({ query: '(max-width: 375px)' })
+	const exit = () => {
+		localStorage.removeItem('token')
+		navigate('/register')
+	}
 
 	return (
 		<header className={styles.header}>
 			<div className={styles.container}>
 				<div className={styles.headerTop}>
 					{isMobile ? (
-						<img className={styles.iconBtn} src={Exit} alt='Exit' />
+						<img
+							className={styles.iconBtn}
+							src={Exit}
+							alt='Exit'
+							onClick={exit}
+						/>
 					) : (
-						<Button className={styles.button}>Выход</Button>
+						<Button className={styles.button} onClick={exit}>
+							Выход
+						</Button>
 					)}
 				</div>
 				<div className={styles.headerContent}>

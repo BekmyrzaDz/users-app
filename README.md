@@ -7,7 +7,7 @@ Test task
 **Clone git repository**
 
 ```
-https://github.com/BekmyrzaDz/neo-movie
+https://github.com/BekmyrzaDz/users-app.git
 ```
 
 **Installation dependencies**

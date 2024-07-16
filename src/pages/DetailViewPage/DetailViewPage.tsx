@@ -4,7 +4,6 @@ import { useAppDispatch, useAppSelector } from '../../hooks/redux'
 import { DetailViewContent, Header } from '../../modules'
 import { extractFirstNumberFromString } from '../../modules/DetailViewPage/helpers'
 import { fetchUser } from '../../modules/DetailViewPage/redux/asyncActions'
-import styles from './DetailViewPage.module.scss'
 
 const DetailViewPage = () => {
 	const dispatch = useAppDispatch()
@@ -22,14 +21,14 @@ const DetailViewPage = () => {
 	const email = userData?.data?.email
 
 	return (
-		<div className={styles.detailView}>
+		<>
 			<Header
 				firstName={firstName as string}
 				lastName={lastName as string}
 				avatar={avatar as string}
 			/>
 			<DetailViewContent email={email as string} phone={'+7 (954) 333-44-55'} />
-		</div>
+		</>
 	)
 }
 

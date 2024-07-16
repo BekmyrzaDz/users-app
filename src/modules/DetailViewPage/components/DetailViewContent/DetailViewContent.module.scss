@@ -7,7 +7,7 @@
 }
 
 .detailViewContent {
-	margin-top: 50px;
+	margin: 50px 0 50px;
 }
 
 .container {
@@ -17,8 +17,9 @@
 
 .detailViewContentInner {
 	display: grid;
-	grid-template-columns: 630px 1fr;
+	grid-template-columns: auto 188px;
 	gap: 129px;
+	padding: 0 16px;
 }
 
 .contacts {
@@ -59,4 +60,16 @@
 .emailImg {
 	width: 24px;
 	height: 24px;
+}
+
+@media (max-width: 609px) {
+	.detailViewContent {
+		margin: 32px 0 32px;
+	}
+
+	.detailViewContentInner {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 32px;
+	}
 }
